@@ -1,4 +1,4 @@
-module.exports = function multipliesOf3And5UnderN(n) {
+module.exports = function multipliesOf3And5BelowN(n) {
     const a = 3;
     const b = 5;
     let result = 0;
