@@ -9,7 +9,7 @@ describe('largestFoundProductInSeries', function() {
         assert.equal(largestFoundProductInSeries(numberSeries, 4), 5832);
     });
 
-    it('should return x when n is 13', () => {
+    it('should return 23514624000 when n is 13', () => {
         assert.equal(largestFoundProductInSeries(numberSeries, 13), 23514624000);
     });
 });
