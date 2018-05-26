@@ -81,4 +81,4 @@ module.exports = function largestProducOfFourNumbersInNxNGrid(grid) {
     }
 
     return largestProduct;
-}
+};
