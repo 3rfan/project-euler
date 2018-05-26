@@ -13,20 +13,6 @@ function isPrime(n) {
     return true;
 }
 
-// module.exports = function sumOfPrimesBelowN(n) {
-//     if (n < 3) return 0;
-
-//     let sum = 2;
-
-//     for (let i = 3; i < n; i += 2) {
-//         if (isPrime(i)) {
-//             sum += i;
-//         }
-//     }
-
-//     return sum;
-// };
-
 module.exports = function sumOfPrimesBelowN(n) {
     if (n < 3) return 0;
 
