@@ -1,9 +1,10 @@
 module.exports = function findLongestCollatzSequenceBelowN(n) {
     let longestSqeuence = 0;
     let longestSequenceStartingNumber = n;
+    const cache = [];
 
-    for (let i = n - 1; i > 0; i--) {
-        let squenceLength = 3;
+    for (let i = 4; i < n; i++) {
+        let sequenceLength = 3;
         let sequenceNumber = i;
 
         // the Collatz sequence ends with 4, 2, 1. So we can stop at 4
@@ -14,11 +15,20 @@ module.exports = function findLongestCollatzSequenceBelowN(n) {
                 sequenceNumber = 3 * sequenceNumber + 1;
             }
 
-            squenceLength++;
+            if (cache[sequenceNumber]) {
+                sequenceLength += cache[sequenceNumber];
+                break;
+            }
+
+            sequenceLength++;
         }
 
-        if (squenceLength > longestSqeuence) {
-            longestSqeuence = squenceLength;
+        if (!cache[i]) {
+            cache[i] = sequenceLength;
+        }
+
+        if (sequenceLength > longestSqeuence) {
+            longestSqeuence = sequenceLength;
             longestSequenceStartingNumber = i;
         }
     }
