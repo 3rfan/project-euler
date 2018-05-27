@@ -25,6 +25,9 @@ module.exports = function firstTriangularNumberWithOverNDivisors(n) {
     while (!(divisors > n)) {
         triangleNumber =  i * (i + 1) / 2;
 
+        // The nth triangular number is equal to n(n+1)/2, which can be factored as 
+        // (n/2)(n+1) or n((n+1)/2) depending on whether n is even or odd.
+        // https://codereview.stackexchange.com/a/118800
         if (i % 2 === 0) {
             divisors = getDivisorsCountOfN(i / 2) * getDivisorsCountOfN(i + 1);
         } else {
