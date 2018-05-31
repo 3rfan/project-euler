@@ -1,5 +1,5 @@
 module.exports = function getNumberLettersCountOfNNumbers(n) {
-    if (n > 1000) {
+    if (n > 9999) {
         throw new Error('n must not be larger than 1000');
     }
 
